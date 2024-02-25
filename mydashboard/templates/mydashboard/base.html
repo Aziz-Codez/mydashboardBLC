@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load horizon %}
+
+{% block sidebar %}
+  {% include 'horizon/common/_sidebar.html' %}
+{% endblock %}
+
+{% block main %}
+  {% include "horizon/_messages.html" %}
+  {% block mydashboard_main %}{% endblock %}
+{% endblock %}
+

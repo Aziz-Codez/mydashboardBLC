@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}{% trans "Aypos" %}{% endblock %}
+
+{% block page_header %}
+ {% include "horizon/common/_page_header.html" with title=_("Aypos") %}
+{% endblock page_header %}
+
+{% block main %}
+<div style="height:500px; width:800px;">
+ <canvas id="power-graph"></canvas>
+</div>
+
+<div id="chart-description">
+ <h2> Explanation   </h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel sapien et libero facilisis ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+     <p>Sed vitae nibh eu eros convallis condimentum. Maecenas pellentesque, nibh id finibus ullamcorper, arcu ipsum cursus purus, ut volutpat nulla sem vel velit. </p>
+     <p>Integer non velit ac purus auctor aliquet. Vivamus aliquam, nunc at faucibus molestie, leo eros blandit felis, eget blandit enim lorem eu diam..</p>
+ </div>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+ <script src="{% static 'mydashboard/js/linechart.js' %}"></script>
+{% endblock %}
+
